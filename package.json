@@ -1,0 +1,38 @@
+{
+	"name": "projet_blecweb_erp",
+	"version": "1.0.0",
+	"description": "Site web de BLEC Web en éco-construction avec erp",
+	"projetType": "site web",
+	"projetName": "blecweb_erp",
+	"projetReference": "sw-2407",
+	"projetPart": "monolithe",
+	"main": "index.js",
+	"scripts": {
+		"start": "node src/index.js",
+		"local": "node index.js",
+		"watch": "nodemon -e js,ejs,html,env,css",
+		"build": "webpack",
+		"build:ejs": "ejs-cli /views/pages/*.ejs -o dist",
+		"graphql": "node src/server.js",
+		"dev": "next dev"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RBLEC/bw_site_erp_nextjs_pg"
+	},
+	"dependencies": {
+		"@apollo/client": "^3.11.1",
+		"@graphql-tools/schema": "^10.0.4",
+		"dotenv": "^16.4.5",
+		"express": "^4.19.2",
+		"express-graphql": "^0.12.0",
+		"graphql": "^16.9.0",
+		"next": "^14.2.5",
+		"pg": "^8.12.0",
+		"postgraphile": "^4.13.0",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"sqlite3": "^5.1.7",
+		"uuid": "^10.0.0"
+	}
+}
