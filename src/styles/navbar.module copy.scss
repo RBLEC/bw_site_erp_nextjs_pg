@@ -1,0 +1,79 @@
+/* Style général pour le menu burger */
+.burger-menu button {
+  display: none; /* Cache le menu burger par défaut */
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.burger-menu button span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: var(--transition-fast);
+  background-color: var(--cta-light);
+}
+
+/* Styles de navigation */
+.navbar {
+  ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    padding: 0;
+    margin: 0 1.5rem;
+  }
+
+  ul li {
+    display: inline-block;
+    margin-right: var(--space-sm);
+    padding: var(--space-xs);
+    border-radius: var(--border-radius-large);
+    background-color: var(--navbg-color);
+    color: var(--background-color);
+    width: 6.5rem;
+  }
+
+  ul li:hover {
+    background-color: var(--cta-light);
+    color: var(--text-color);
+  }
+
+  ul li a {
+    text-decoration: none;
+    font-weight: 700;
+    color: inherit;
+  }
+}
+
+/* Affichage du bouton burger et gestion de la navigation sur les petits écrans */
+@media (max-width: 768px) {
+  .burger-menu button {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+
+    &.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 4rem;
+      right: 0;
+      background-color: var(--navbg-color);
+      width: 9rem;
+      padding: var(--space-sm) 0;
+      z-index: 999;
+    }
+
+    ul {
+      flex-direction: column;
+    }
+
+    ul li {
+      margin: var(--space-xs);
+    }
+  }
+}

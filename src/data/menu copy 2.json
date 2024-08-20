@@ -1,0 +1,24 @@
+{
+  "menus": [
+    {
+      "name": "Services",
+      "slug": "services",
+      "jsonFile": "services.json"
+    },
+    {
+      "name": "Blog",
+      "slug": "blog",
+      "jsonFile": "blog.json"
+    },
+    {
+      "name": "Hébergement",
+      "slug": "hebergement",
+      "jsonFile": "hosting.json"
+    },
+    {
+      "name": "Produits",
+      "slug": "produits",
+      "jsonFile": "products.json"
+    }
+  ]
+}

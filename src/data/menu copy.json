@@ -1,0 +1,33 @@
+{
+  "menu": [
+    {
+      "label": "Home",
+      "url": "/",
+      "subMenu": []
+    },
+    {
+      "label": "About Us",
+      "url": "/about",
+      "subMenu": []
+    },
+    {
+      "label": "Services",
+      "url": "/services",
+      "subMenu": [
+        {
+          "label": "Web Development",
+          "url": "/services/web-development"
+        },
+        {
+          "label": "Graphic Design",
+          "url": "/services/graphic-design"
+        },
+        {
+          "label": "Consulting",
+          "url": "/services/consulting"
+        }
+      ]
+    }
+    // Ajoute plus de menus ici
+  ]
+}

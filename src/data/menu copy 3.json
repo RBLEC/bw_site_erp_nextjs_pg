@@ -1,0 +1,121 @@
+{
+  "menu": [
+    {
+      "label": "Home",
+      "url": "/",
+      "subMenu": []
+    },
+    {
+      "label": "About Us",
+      "url": "/about",
+      "subMenu": []
+    },
+    {
+      "label": "Services",
+      "url": "/services",
+      "subMenu": [
+        {
+          "label": "Web Development",
+          "url": "/services/web-development"
+        },
+        {
+          "label": "Graphic Design",
+          "url": "/services/graphic-design"
+        },
+        {
+          "label": "Consulting",
+          "url": "/services/consulting"
+        }
+      ]
+    },
+    {
+      "label": "Portfolio",
+      "url": "/portfolio",
+      "subMenu": []
+    },
+    {
+      "label": "Blog",
+      "url": "/blog",
+      "subMenu": []
+    },
+    {
+      "label": "Testimonials",
+      "url": "/testimonials",
+      "subMenu": []
+    },
+    {
+      "label": "FAQs",
+      "url": "/faqs",
+      "subMenu": []
+    },
+    {
+      "label": "Team",
+      "url": "/team",
+      "subMenu": []
+    },
+    {
+      "label": "Careers",
+      "url": "/careers",
+      "subMenu": []
+    },
+    {
+      "label": "Case Studies",
+      "url": "/case-studies",
+      "subMenu": []
+    },
+    {
+      "label": "Resources",
+      "url": "/resources",
+      "subMenu": []
+    },
+    {
+      "label": "Partners",
+      "url": "/partners",
+      "subMenu": []
+    },
+    {
+      "label": "Events",
+      "url": "/events",
+      "subMenu": []
+    },
+    {
+      "label": "Gallery",
+      "url": "/gallery",
+      "subMenu": []
+    },
+    {
+      "label": "Press",
+      "url": "/press",
+      "subMenu": []
+    },
+    {
+      "label": "Contact",
+      "url": "/contact",
+      "subMenu": []
+    },
+    {
+      "label": "Login",
+      "url": "/login",
+      "subMenu": []
+    },
+    {
+      "label": "Dashboard",
+      "url": "/dashboard",
+      "subMenu": [
+        {
+          "label": "My Articles",
+          "url": "/dashboard/my-articles"
+        },
+        {
+          "label": "Create New Article",
+          "url": "/dashboard/new-article"
+        },
+        {
+          "label": "Account Settings",
+          "url": "/dashboard/account-settings"
+        }
+      ],
+      "requiresAuth": true
+    }
+  ]
+}

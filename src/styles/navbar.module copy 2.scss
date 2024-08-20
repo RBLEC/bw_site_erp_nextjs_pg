@@ -1,0 +1,55 @@
+.navbar {
+  background-color: #333;
+  padding: 1rem;
+
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    .menuItem {
+      position: relative;
+      margin-right: 1rem;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        display: block;
+
+        &:hover {
+          background-color: #555;
+        }
+      }
+
+      .subMenu {
+        list-style: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        display: none;
+        background-color: #444;
+
+        .menuItem {
+          margin-right: 0;
+
+          a {
+            padding: 0.5rem 1rem;
+            display: block;
+
+            &:hover {
+              background-color: #666;
+            }
+          }
+        }
+      }
+
+      &:hover .subMenu {
+        display: block;
+      }
+    }
+  }
+}

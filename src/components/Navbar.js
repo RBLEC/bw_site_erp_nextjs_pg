@@ -1,44 +1,26 @@
-// src/components/Navbar.js
 import Link from 'next/link';
-import { useState } from 'react';
+import styles from '../styles/navbar.module.scss';
 
-const Navbar = () => {
-  const [showServices, setShowServices] = useState(false);
+const Navbar = ({ menuData = { menu: [] }, isAuthenticated }) => {
+  console.log('Navbar Menu Data:', menuData); // Log pour vérifier les données reçues
 
-  const toggleServicesMenu = () => {
-    setShowServices(!showServices);
+  const renderMenuItems = (menuItems) => {
+    return menuItems.map((menuItem, index) => (
+      <li key={index} className={styles.menuItem}>
+        <Link href={menuItem.url}>{menuItem.label}</Link>
+        {menuItem.subMenu && menuItem.subMenu.length > 0 && (
+          <ul className={styles.subMenu}>
+            {renderMenuItems(menuItem.subMenu)}
+          </ul>
+        )}
+      </li>
+    ));
   };
 
   return (
-    <nav className="bg-gray-800 p-4">
-      <ul className="flex justify-around list-none">
-        <li className="mx-4">
-          <Link href="/" className="text-white hover:underline">Home</Link>
-        </li>
-        <li className="mx-4">
-          <Link href="/about" className="text-white hover:underline">About</Link>
-        </li>
-        <li className="mx-4">
-          <Link href="/contact" className="text-white hover:underline">Contact</Link>
-        </li>
-        <li className="mx-4 relative">
-          <button onClick={toggleServicesMenu} className="text-white hover:underline">
-            Services
-          </button>
-          {showServices && (
-            <ul className="absolute top-full left-0 mt-2 bg-gray-700 p-2 list-none">
-              <li className="mb-2">
-                <Link href="/services/service1" className="text-white hover:underline">Service 1</Link>
-              </li>
-              <li className="mb-2">
-                <Link href="/services/service2" className="text-white hover:underline">Service 2</Link>
-              </li>
-              <li className="mb-2">
-                <Link href="/services/service3" className="text-white hover:underline">Service 3</Link>
-              </li>
-            </ul>
-          )}
-        </li>
+    <nav className={styles.navbar}>
+      <ul className={styles.menu}>
+        {menuData.menu.length > 0 ? renderMenuItems(menuData.menu) : <li>No menu available</li>}
       </ul>
     </nav>
   );

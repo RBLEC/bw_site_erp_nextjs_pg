@@ -1,0 +1,678 @@
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('/fonts/Nunito-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('/fonts/Nunito-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('/fonts/Nunito-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Variables globales */
+:root {
+  /* Border Styles */
+  --border-width: 0.0625rem; /* 1px / 16px */
+  --border-style: solid;
+  --border-color: var(--primary-light); /* Adjusted for consistency */
+
+  /* Font Settings */
+  --primary-font: 'Nunito Sans', sans-serif;
+  --secondary-font: 'Roboto', sans-serif;
+
+  /* Font Sizes */
+  --title-size: 2.5rem;
+  --subtitle-size: 1.75rem;
+  --paragraph-size: 1rem;
+
+  /* Shadows */
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.9);
+  --shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.9);
+
+  /* Border Radius */
+  --border-radius-small: 0.25rem;
+  --border-radius-medium: 0.5rem;
+  --border-radius-large: 1rem;
+  --border-radius-circle: 50%;
+
+  /* Transitions */
+  --transition-fast: 0.3s ease-in-out;
+  --transition-normal: 0.5s ease-in-out;
+  --transition-slow: 0.8s ease-in-out;
+
+  /* Spacings */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+
+  /* Maximum Widths & Container Padding */
+  --max-width: 75rem;
+  --container-padding: 2rem;
+
+  /* Z-Index */
+  --zindex-dropdown: 1000;
+  --zindex-sticky: 1020;
+  --zindex-modal: 1050;
+
+  /* Couleurs principales en mode clair */
+  --primary-light: #0E2D45;
+  --primary-light-rgb: 14,45,69;
+  --secondary-light: #0BA081;
+  --secondary-light-rgb: 11, 160, 129;
+  --tertiary-light: #7E549F;
+  --cta-light: #FF8C00;
+  --text-light: #1E1E1E;
+  --background-light: #f9fafa;
+  --middle-light: #7D7D7D;
+  --gray-background-light: #E0E0E0;
+  --gray-text-light: #545454;
+  --rgba-light: rgba(249,250, 250, 0.70);
+
+  /* Couleurs pour le mode sombre */
+  --primary-dark: #87A6BC;
+  --primary-dark-rgb:135, 166, 188;
+  --secondary-dark: #4B8978;
+  --secondary-dark-rgb:75, 137, 120;
+  --tertiary-dark: #A884BF;
+  --cta-dark: #FFB347;
+  --text-dark: #E1E1E1;
+  --background-dark: #121212;
+  --middle-dark: #9A9A9A;
+  --gray-background-dark: #333333;
+  --gray-text-dark: #CBCBCB;
+  --rgba-dark:rgba(14,45, 69, 0.70);
+}
+
+/* Thèmes clair et sombre */
+.dark-theme {
+  --background-color: var(--background-dark); /* Fond sombre */
+  --text-color: var(--text-dark); /* Texte clair */
+  --primary-color-rgb: var(--primary-dark-rgb);
+  --primary-color: var(--primary-dark);
+  --secondary-color: var(--secondary-dark);
+  --secondary-color-rgb: var(--secondary-dark-rgb);
+  --tertiary-color: var(--tertiary-dark);
+  --a-text-color: var(--primary-dark);
+  --a-text-color-hover: var(--cta-dark);
+  --navbg-color: var(--primary-dark);
+  --cta:var(--cta-dark);
+  --bg-rgba: var(--rgba-dark);
+  --bg-section-child-1: var(--primary-dark);
+  --bg-section-child-2: var(--secondary-dark);
+  --bg-section-child-3: var(--tertiary-dark);
+  --bg-section-child-4: var(--middle-dark);
+}
+
+.light-theme {
+  --background-color: var(--background-light); /* Fond clair */
+  --text-color: var(--primary-light); /* Texte sombre */
+  --primary-color: var(--primary-light); /* Couleur primaire claire */
+  --primary-color-rgb: var(--primary-light-rgb); /* Couleur primaire claire */
+  --secondary-color: var(--secondary-light);
+  --secondary-color-rgb: var(--secondary-light-rgb);
+  --tertiary-color: var(--tertiary-light);
+  --a-text-color: var(--primary-dark); /* Couleur des liens */
+  --a-text-color-hover: var(--cta-light); /* Couleur des liens au survol */
+  --navbg-color: var(--primary-light); /* Fond de la navigation */
+  --cta:var(--cta-light);
+  --bg-rgba: var(--rgba-light);
+  --bg-section-child-1: var(--primary-light);
+  --bg-section-child-2: var(--secondary-light);
+  --bg-section-child-3: var(--tertiary-light);
+  --bg-section-child-4: var(--middle-light);
+}
+
+/* Base Styles */
+html {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 1em;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-family: var(--primary-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--primary-font);
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+}
+
+p, li, .body-text {
+  font-family: var(--secondary-font);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: var(--title-size);
+}
+
+h2 {
+  font-size: var(--subtitle-size);
+}
+
+p {
+  font-size: var(--paragraph-size);
+  text-align: justify;
+  text-justify: inter-word;
+  margin: var(--space-xs);
+  word-spacing: 0.25rem;
+  line-height: 1.65rem;
+}
+
+.services-p {
+  font-size: var(--paragraph-size);
+  word-spacing: 0.2rem;
+  line-height: 1.25rem;
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+.cta-button {
+  padding: 10px 30px;
+  background: var(--cta);
+  color: var(--primary-light);
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 0.25rem;
+  font-weight: 800;
+  box-shadow: 0 0 5px black;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--navbg-color);
+  color: var(--text-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+[class$="-container"] {
+  padding: 1.5rem;
+}
+
+main {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.services {
+  text-align: center;
+  background-color: var(--bg-rgba); /* Couleur de fond légère pour la section des services */
+  padding: 2rem 0; /* Espacement autour de la section */
+  box-shadow: 0 0 10px black;
+}
+
+.services-title {
+  color: var(--text-color);
+  margin: 2rem;
+}
+
+.service-intro {
+  color: var(--text-color);
+  max-width: 800px; /* Largeur maximale pour le texte d'introduction */
+  margin: 0 auto 2rem; /* Centrer et ajouter de l'espace en dessous */
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux cartes de services de passer à la ligne sur de petits écrans */
+  justify-content: center; /* Centrer les cartes dans le conteneur */
+  gap: 1rem; /* Espacement entre les cartes */
+}
+
+.service-card {
+  background-color: var(--bg-rgba);
+  border: 1px solid #e1e1e1;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  margin: 1rem;
+  min-width: 15rem;
+  max-width: 20rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.services-btn {
+  margin: 3rem;
+}
+
+.image-svg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50%;
+  max-width: 100%;
+  height: auto; /* Ou une valeur spécifique si vous voulez une hauteur fixe */
+}
+
+/* barre de défilement */
+::-webkit-scrollbar {
+  width: .75em;
+  background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--navbg-color);
+  border-radius: 1em;
+  border: 2px solid var(--background-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--cta-light);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 6px;
+}
+
+/* Portfolio */
+.portfolio {
+  background-color: rgba(14,45,69,0.20);
+  box-shadow: 0  10px 10px rgba(0, 0, 0, 0.6);
+  z-index: 98;
+  text-align: center;
+  /*display: flex;*/
+}
+
+.technology-filters {
+  justify-content: center;
+  margin: 2rem;
+}
+
+/* Styles de base pour le portfolio */
+.portfolio-intro-container2 h1,
+.portfolio-intro-container2 p {
+  text-align: center;
+  display: flex;
+}
+
+/* Styles des cartes de projet */
+.project-card {
+  margin: 1.25rem;
+  background-color: rgba(var(--primary-color-rgb),0.25);
+  max-width: 450px;
+  height : 100%;
+  display: block;
+  transition: transform 0.3s ease;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--primary-color);
+}
+
+.project-card:hover {
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.project-card-header {
+  display: flex;
+}
+
+.project-card-header-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-title {
+  margin: auto;
+}
+
+.project-card-description {
+  font-weight: 500;
+}
+
+.project-link {
+  margin: 0.5em;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.project-ecoindex {
+  margin: auto;
+}
+
+/* Styles pour les logos des projets */
+.logo-project {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+
+/* Styles pour la liste des technologies */
+.project-technologies {
+  list-style: none;
+  padding: 0.5em;
+  text-align: center;
+  margin: 0;
+  min-height: 7.5em;
+  background-color: rgba(var(--primary-color-rgb),0.25);
+  color: #e1e1e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project-technologies2 {
+  list-style: none;
+  padding: 0.5em;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #e1e1e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project-ecoindex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* Styles pour les images Ecoindex */
+.ecoindex-img .project-ecoindex {
+  display: block;
+  width: 80px;  /*Adapté à la taille de la carte*/
+  height: auto;
+}
+
+.projet-btn {
+  margin: auto;
+  background-color: var(--navbg-color);
+  color: var(--a-text-color2);
+  padding: 0.5em 0.75em;
+  border-radius: 1.5em;
+  color: #e1e1e1;
+}
+
+.projet-btn:hover {
+  background-color: var(--cta-light);
+  font-weight: 700;
+}
+
+.project-technologies li, .filter-btn {
+  display: inline-block;
+  margin: 0.25em;
+  padding: 0.5em 0.75em;
+  border-radius: 1.5em;
+  background-color: var(--primary-light);
+  color: var(--a-text-color2);
+  font-weight: 700;
+  font-family: var(--secondary-font);
+  color: #e1e1e1;
+}
+
+.filter-btn.active-filter {
+  background-color: var(--cta-light);
+  color: var(--primary-color-light);
+  font-weight: 700;
+}
+
+/* Icones du projet */
+.icon-project {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+}
+
+/* Conteneur général des projets */
+.portfolio-projects-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Cartes d'invitation */
+.invite-card {
+  background-color: var(--primary-light); /* La couleur primaire de votre marque */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--text-light); /* La couleur du texte de votre marque */
+  padding: 20px;
+  text-align: center;
+  max-width: 300px; /* Ajustez selon les besoins */
+  transition: transform 0.3s ease;
+}
+
+.invite-card:hover {
+  transform: scale(1.05); /* Effet de légère agrandissement au survol */
+}
+
+.invite-card img {
+  width: 100%; /* Ajustez selon les besoins */
+  border-radius: 10px 10px 0 0;
+}
+
+.invite-card h3 {
+  margin-top: 15px; /* Espacement après l'image */
+  font-size: 1.5em; /* Ajustez selon les besoins */
+}
+
+.invite-card p {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.invite-card .cta-button {
+  background-color: var(--cta-light); /* La couleur CTA de votre marque */
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* si c'est un lien */
+  display: inline-block; /* si c'est un lien */
+  margin-top: 15px;
+}
+
+/* Exemple de style pour un témoignage */
+.invite-card .testimonial {
+  font-style: italic;
+  font-size: 0.9em;
+  margin-top: 20px;
+  color: var(--middle-light); /* Une couleur neutre de votre palette */
+}
+
+/* Responsive Styles */
+
+/* Petits écrans (téléphones en mode paysage et plus grands téléphones en mode portrait) */
+@media screen and (max-width: 480px) {
+  [class$="-container"] {
+    padding: 0.5rem;
+  }
+
+  .service-intro {
+    margin: 2rem;
+  }
+
+  .about-text-container {
+    margin: 0.5rem;
+  }
+
+  .hero-container h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .slogan {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .hero-container {
+    min-height: 0vh;
+    max-height: 50vh;
+    padding: 0.25rem;
+  }
+
+  .cta-button {
+    padding: 5px 10px;
+    font-size: 1rem;
+  }
+
+  .services-btn {
+    margin: 1rem;
+  }
+
+  .services-title {
+    margin: 0.25rem;
+  }
+
+  h2 {
+    padding: 0;
+  }
+
+  .service-card {
+    width: 15rem;
+  }
+
+  .project-card {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .about-container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .image-svg-container {
+    padding: 0;
+    display: none;
+  }
+
+  .project-card-header {
+    flex-direction: column;
+  }
+
+  .project-link {
+    flex-direction: column;
+  }
+
+  a {
+    margin: 0.25rem;
+  }
+
+  .about-container-center {
+    flex-direction: column;
+  }
+}
+
+/* Tablettes et petits ordinateurs portables/écrans */
+@media screen and (max-width: 768px) {
+  [class$="-container"] {
+    padding: 0.75rem;
+  }
+
+  .service-intro {
+    margin: 1rem;
+  }
+
+  .service-card {
+    width: calc(33.333% - 0rem);
+  }
+
+  .about-text-container {
+    margin: 0.75rem;
+  }
+
+  .hero-container h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .portfolio-projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-container-center {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  [class$="-container"] {
+    padding: 0.75rem;
+  }
+
+  .service-intro {
+    margin: 1rem;
+  }
+
+  .service-card {
+    width: calc(33.333% - 0rem);
+  }
+
+  .about-text-container {
+    margin: 0.75rem;
+  }
+
+  .hero-container h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .portfolio-projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-container-center {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "pages": [
+    {
+      "slug": "a-propos",
+      "title": "À Propos",
+      "content": "<p>Bienvenue sur la page À Propos. Voici quelques informations à propos de nous...</p>"
+    },
+    {
+      "slug": "services",
+      "title": "Services",
+      "content": "<p>Voici une liste de nos services...</p>"
+    },
+    {
+      "slug": "portfolio",
+      "title": "Portfolio",
+      "content": "<p>Voici notre portfolio...</p>"
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "content": "<p>Contactez-nous via ce formulaire...</p>"
+    }
+  ]
+}

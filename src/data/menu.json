@@ -1,0 +1,42 @@
+{
+  "headerMenu": [
+    {
+      "label": "Home",
+      "url": "/",
+      "subMenu": []
+    },
+    {
+      "label": "About Us",
+      "url": "/about",
+      "subMenu": []
+    },
+    {
+      "label": "Services",
+      "url": "/services",
+      "subMenu": [
+        {
+          "label": "Web Development",
+          "url": "/services/web-development"
+        },
+        {
+          "label": "Graphic Design",
+          "url": "/services/graphic-design"
+        }
+      ]
+    }
+  ],
+  "footerMenu": [
+    {
+      "label": "Privacy Policy",
+      "url": "/privacy-policy"
+    },
+    {
+      "label": "Terms of Service",
+      "url": "/terms-of-service"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact"
+    }
+  ]
+}
