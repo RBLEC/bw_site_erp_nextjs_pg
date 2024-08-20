@@ -13,7 +13,8 @@ export default function Page({ pageData }) {
 
 export async function getStaticPaths() {
   // Charger les données du fichier JSON
-  const filePath = path.join(process.cwd(), 'src/data/pages.json');
+  //!const filePath = path.join(process.cwd(), 'src/data/pages.json');
+  const filePath = path.join(process.cwd(), 'src/data/menu.json');
   const jsonData = fs.readFileSync(filePath, 'utf-8');
   const data = JSON.parse(jsonData);
 
@@ -30,7 +31,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   // Charger les données du fichier JSON
-  const filePath = path.join(process.cwd(), 'src/data/pages.json');
+  //!const filePath = path.join(process.cwd(), 'src/data/pages.json');
+  const filePath = path.join(process.cwd(), 'src/data/menu.json');
   const jsonData = fs.readFileSync(filePath, 'utf-8');
   const data = JSON.parse(jsonData);
 

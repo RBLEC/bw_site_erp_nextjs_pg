@@ -1,0 +1,149 @@
+{
+  "headerMenu": [
+    {
+      "label": "Home",
+      "url": "/",
+      "slug": "home",
+      "subMenu": []
+    },
+    {
+      "label": "About Us",
+      "url": "/about",
+      "slug": "about-us",
+      "subMenu": []
+    },
+    {
+      "label": "Services",
+      "url": "/services",
+      "slug": "services",
+      "subMenu": []
+    },
+    {
+      "label": "Portfolio",
+      "url": "/portfolio",
+      "slug": "portfolio",
+      "subMenu": []
+    },
+    {
+      "label": "Blog",
+      "url": "/blog",
+      "slug": "blog",
+      "subMenu": []
+    },
+    {
+      "label": "Resources",
+      "url": "/resources",
+      "slug": "resources",
+      "subMenu": []
+    },
+    {
+      "label": "Contact",
+      "url": "/contact",
+      "slug": "contact",
+      "subMenu": []
+    },
+    {
+      "label": "Login",
+      "url": "/login",
+      "slug": "login",
+      "subMenu": []
+    },
+    {
+      "label": "Dashboard",
+      "url": "/dashboard",
+      "slug": "dashboard",
+      "subMenu": [],
+      "requiresAuth": true
+    },
+    {
+      "label": "Profile",
+      "url": "/profile",
+      "slug": "profile",
+      "subMenu": [],
+      "requiresAuth": true
+    },
+    {
+      "label": "Search",
+      "url": "/search",
+      "slug": "search",
+      "subMenu": []
+    },
+    {
+      "label": "Request a Quote",
+      "url": "/request-quote",
+      "slug": "request-a-quote",
+      "highlight": true
+    },
+    {
+      "label": "Language",
+      "url": "/language",
+      "slug": "language",
+      "subMenu": []
+    },
+    {
+      "label": "Accessibility",
+      "url": "/accessibility",
+      "slug": "accessibility",
+      "subMenu": []
+    },
+    {
+      "label": "Announcements",
+      "url": "/announcements",
+      "slug": "announcements",
+      "subMenu": []
+    }
+  ],
+  "footerMenu": [
+    {
+      "label": "Privacy Policy",
+      "url": "/privacy-policy",
+      "slug": "privacy-policy"
+    },
+    {
+      "label": "Terms of Service",
+      "url": "/terms-of-service",
+      "slug": "terms-of-service"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact",
+      "slug": "contact"
+    },
+    {
+      "label": "FAQs",
+      "url": "/faqs",
+      "slug": "faqs"
+    },
+    {
+      "label": "Testimonials",
+      "url": "/testimonials",
+      "slug": "testimonials"
+    },
+    {
+      "label": "Careers",
+      "url": "/careers",
+      "slug": "careers"
+    },
+    {
+      "label": "Sitemap",
+      "url": "/sitemap",
+      "slug": "sitemap"
+    },
+    {
+      "label": "Press",
+      "url": "/press",
+      "slug": "press"
+    },
+    {
+      "label": "Partners",
+      "url": "/partners",
+      "slug": "partners"
+    },
+    {
+      "label": "Social Media",
+      "url": "/social-media",
+      "slug": "social-media",
+      "subMenu": []
+    }
+  ]
+}

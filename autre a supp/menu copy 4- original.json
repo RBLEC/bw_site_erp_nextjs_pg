@@ -1,0 +1,265 @@
+{
+  "headerMenu": [
+    {
+      "label": "Home",
+      "url": "/",
+      "subMenu": []
+    },
+    {
+      "label": "About Us",
+      "url": "/about",
+      "subMenu": [
+        {
+          "label": "Our Story",
+          "url": "/about/our-story"
+        },
+        {
+          "label": "Our Team",
+          "url": "/about/our-team"
+        },
+        {
+          "label": "Careers",
+          "url": "/about/careers"
+        }
+      ]
+    },
+    {
+      "label": "Services",
+      "url": "/services",
+      "subMenu": [
+        {
+          "label": "Design",
+          "url": "/services/design",
+          "subMenu": [
+            {
+              "label": "Graphic Design",
+              "url": "/services/design/graphic-design"
+            },
+            {
+              "label": "UI/UX Design",
+              "url": "/services/design/ui-ux-design"
+            }
+          ]
+        },
+        {
+          "label": "Development",
+          "url": "/services/development",
+          "subMenu": [
+            {
+              "label": "Web Development",
+              "url": "/services/development/web-development"
+            },
+            {
+              "label": "Mobile App Development",
+              "url": "/services/development/mobile-app-development"
+            }
+          ]
+        },
+        {
+          "label": "Consulting",
+          "url": "/services/consulting"
+        },
+        {
+          "label": "SEO Optimization",
+          "url": "/services/seo-optimization"
+        }
+      ]
+    },
+    {
+      "label": "Portfolio",
+      "url": "/portfolio",
+      "subMenu": [
+        {
+          "label": "Web Projects",
+          "url": "/portfolio/web-projects"
+        },
+        {
+          "label": "Graphic Design Projects",
+          "url": "/portfolio/graphic-design-projects"
+        },
+        {
+          "label": "Case Studies",
+          "url": "/portfolio/case-studies"
+        }
+      ]
+    },
+    {
+      "label": "Blog",
+      "url": "/blog",
+      "subMenu": [
+        {
+          "label": "Latest Posts",
+          "url": "/blog/latest-posts"
+        },
+        {
+          "label": "Categories",
+          "url": "/blog/categories"
+        },
+        {
+          "label": "Archives",
+          "url": "/blog/archives"
+        }
+      ]
+    },
+    {
+      "label": "Resources",
+      "url": "/resources",
+      "subMenu": [
+        {
+          "label": "White Papers",
+          "url": "/resources/white-papers"
+        },
+        {
+          "label": "E-books",
+          "url": "/resources/e-books"
+        },
+        {
+          "label": "Webinars",
+          "url": "/resources/webinars"
+        }
+      ]
+    },
+    {
+      "label": "Contact",
+      "url": "/contact",
+      "subMenu": []
+    },
+    {
+      "label": "Login",
+      "url": "/login",
+      "subMenu": []
+    },
+    {
+      "label": "Dashboard",
+      "url": "/dashboard",
+      "subMenu": [
+        {
+          "label": "My Articles",
+          "url": "/dashboard/my-articles"
+        },
+        {
+          "label": "Create New Article",
+          "url": "/dashboard/new-article"
+        },
+        {
+          "label": "Account Settings",
+          "url": "/dashboard/account-settings"
+        }
+      ],
+      "requiresAuth": true
+    },
+    {
+      "label": "Profile",
+      "url": "/profile",
+      "subMenu": [
+        {
+          "label": "View Profile",
+          "url": "/profile/view"
+        },
+        {
+          "label": "Notifications",
+          "url": "/profile/notifications"
+        },
+        {
+          "label": "Logout",
+          "url": "/logout"
+        }
+      ],
+      "requiresAuth": true
+    },
+    {
+      "label": "Search",
+      "url": "/search",
+      "subMenu": []
+    },
+    {
+      "label": "Request a Quote",
+      "url": "/request-quote",
+      "highlight": true
+    },
+    {
+      "label": "Language",
+      "url": "/language",
+      "subMenu": [
+        {
+          "label": "English",
+          "url": "/?lang=en"
+        },
+        {
+          "label": "Fran\u00e7ais",
+          "url": "/?lang=fr"
+        }
+      ]
+    },
+    {
+      "label": "Accessibility",
+      "url": "/accessibility",
+      "subMenu": []
+    },
+    {
+      "label": "Announcements",
+      "url": "/announcements",
+      "subMenu": []
+    }
+  ],
+  "footerMenu": [
+    {
+      "label": "Privacy Policy",
+      "url": "/privacy-policy"
+    },
+    {
+      "label": "Terms of Service",
+      "url": "/terms-of-service"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact"
+    },
+    {
+      "label": "FAQs",
+      "url": "/faqs"
+    },
+    {
+      "label": "Testimonials",
+      "url": "/testimonials"
+    },
+    {
+      "label": "Careers",
+      "url": "/careers"
+    },
+    {
+      "label": "Sitemap",
+      "url": "/sitemap"
+    },
+    {
+      "label": "Press",
+      "url": "/press"
+    },
+    {
+      "label": "Partners",
+      "url": "/partners"
+    },
+    {
+      "label": "Social Media",
+      "url": "/social-media",
+      "subMenu": [
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/YourPage"
+        },
+        {
+          "label": "Twitter",
+          "url": "https://www.twitter.com/YourPage"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/YourPage"
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/YourPage"
+        }
+      ]
+    }
+  ]
+}

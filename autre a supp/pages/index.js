@@ -17,7 +17,7 @@ export default function Home({ headerMenuData, footerMenuData, isAuthenticated }
 }
 
 export async function getStaticProps() {
-  const menuFilePath = path.join(process.cwd(), 'src/data/menu.json');
+  const menuFilePath = path.join(process.cwd(), 'src/data/pages/menu.json');
   let headerMenuData = { menu: [] };
   let footerMenuData = { menu: [] };
 
