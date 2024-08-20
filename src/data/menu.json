@@ -23,6 +23,40 @@
           "url": "/services/graphic-design"
         }
       ]
+    },
+    {
+      "label": "Portfolio",
+      "url": "/portfolio",
+      "subMenu": []
+    },
+    {
+      "label": "Blog",
+      "url": "/blog",
+      "subMenu": []
+    },
+    {
+      "label": "Login",
+      "url": "/login",
+      "subMenu": []
+    },
+    {
+      "label": "Dashboard",
+      "url": "/dashboard",
+      "subMenu": [
+        {
+          "label": "My Articles",
+          "url": "/dashboard/my-articles"
+        },
+        {
+          "label": "Create New Article",
+          "url": "/dashboard/new-article"
+        },
+        {
+          "label": "Account Settings",
+          "url": "/dashboard/account-settings"
+        }
+      ],
+      "requiresAuth": true
     }
   ],
   "footerMenu": [
@@ -37,6 +71,18 @@
     {
       "label": "Contact",
       "url": "/contact"
+    },
+    {
+      "label": "FAQs",
+      "url": "/faqs"
+    },
+    {
+      "label": "Testimonials",
+      "url": "/testimonials"
+    },
+    {
+      "label": "Careers",
+      "url": "/careers"
     }
   ]
 }

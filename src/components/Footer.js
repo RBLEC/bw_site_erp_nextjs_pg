@@ -1,6 +1,6 @@
 // src/components/Footer.js
 import Link from 'next/link';
-import styles from '../styles/footer.module.scss'; // Crée un fichier SCSS pour le footer
+import styles from '../styles/footer.module.scss';
 
 const Footer = ({ menuData = { menu: [] } }) => {
   const renderMenuItems = (menuItems) => {
